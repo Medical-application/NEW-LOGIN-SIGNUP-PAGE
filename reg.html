@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="reg.css">
+	<script src="reg.js" defer></script>
+	<title>reg</title>
+</head>
+<body>
+	<div class="main">
+	    <div class="login-form" id="login-form">
+	        <form action="#">
+	           <div class="input-box">
+				 <input type="text" name="username" required placeholder="اسم المستخدم">
+				<i class="fa-solid fa-user"></i>
+			   </div>
+			   <div class="input-box">
+				<input type="password" name="password" required minlength="6" placeholder="كلمة السر">
+				<i class="fa-solid fa-lock"></i>
+			   </div>
+			   <div class="forgot-link">
+				<a href="#"><p>هل نسيت كلمة السر؟</p></a>
+			   </div>
+			   <div class="log-btn">
+				<input class="btn" type="submit" value="أدخل">
+			   </div>
+	        </form>
+	    </div>
+	    <div class="register-form" id="register-form">
+	        <form action="add_patient.php" method="POST">
+			<div class="form-scroll">
+				<div class="input-box">
+					<input type="text" name="p_prenom" required placeholder="الاسم (Prénom)">
+					<i class="fa-solid fa-signature"></i>
+				</div>
+				<div class="input-box">
+					<input type="text" name="p_nom" required placeholder="اللقب (Nom)">
+					<i class="fa-solid fa-id-card"></i>
+				</div>
+				<div class="input-box">
+					<input type="text" name="u_name" required placeholder="اسم المستخدم (Username)">
+					<i class="fa-solid fa-user"></i>
+				</div>
+				<div class="input-box">
+					<input type="tel" name="p_tel" required placeholder="رقم الهاتف" maxlength="10">
+					<i class="fa-solid fa-phone"></i>
+				</div>
+				<div class="input-box">
+					<input type="email" name="p_email" required placeholder="البريد الإلكتروني">
+					<i class="fa-solid fa-envelope"></i>
+				</div>
+				<div class="input-box date-box">
+					<label for="ddn">تاريخ الميلاد</label>
+					<input type="date" name="p_date" id="ddn" required>
+				</div>
+				<div class="input-box select-box">
+					<select name="p_sexe" required>
+						<option value="" disabled selected>اختر الجنس</option>
+						<option value="Homme">ذكر (Homme)</option>
+						<option value="Femme">أنثى (Femme)</option>
+					</select>
+					<i class="fa-solid fa-venus-mars"></i>
+				</div>
+				<div class="input-box">
+					<input type="password" name="u_pass" required placeholder="كلمة المرور">
+					<i class="fa-solid fa-lock"></i>
+				</div>
+				<div class="reg-btn">
+					<input class="btn" type="submit" name="submit_patient" value="أرسل">
+				</div>
+			</div>
+			</form>
+	    </div>
+	    <div class="register-ask" id="register-ask">
+	        <h1>!!مرحبا بعودتك</h1>
+			<p>ليس عندك حساب؟</p>
+			<div class="box-btn">
+				<button class="btn" id="createbtn">أنشئ حساب</button>
+			</div>
+	    </div>
+	    <div class="login-ask" id="login-ask">
+	        <h1>!!مرحبا بك</h1>
+			<p>لديك حساب بالفعل؟</p>
+			<div class="box-btn">
+				<button class="btn" id="backbtn">سجل الدخول</button>
+			</div>
+	    </div>
+	</div>
+</body>
+</html>
